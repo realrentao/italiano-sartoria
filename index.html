@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>意大利语华人修改店实用手册 · Sartoria Cinese</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --surface: #ffffff; --surface2: #eef0f3; --border: #dde0e4;
+    --text: #161a1f; --text-dim: #4b5563; --text-faint: #8b95a5;
+    --green: #1a7f37; --green-l: #e6f4ea; --blue: #0550ae; --blue-l: #e3edfc;
+    --gold: #855f1c; --gold-l: #fef3e2; --purple: #6f42c1; --purple-l: #f0eaff;
+    --teal: #0e7c7b; --teal-l: #e1f3f3; --red: #cf222e; --red-l: #ffe7e7;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-lg: 0 8px 32px rgba(0,0,0,.1);
+    --radius-sm: 6px;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --nav-h: 56px; --tab-h: 48px; --sidebar-w: 200px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); min-height: 100vh; line-height: 1.6; -webkit-font-smoothing: antialiased; padding-top: var(--nav-h); }
+
+  .flag-it { display:inline-block; width:28px; height:19px; background:linear-gradient(90deg,#009246 0%,#009246 33.33%,#fff 33.33%,#fff 66.66%,#ce2b37 66.66%,#ce2b37 100%); border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.18); vertical-align:middle; flex-shrink:0; }
+  .flag-it-sm { width:20px; height:14px; }
+
+  .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .top-bar-inner { display: flex; align-items: center; gap: 12px; padding: 0 16px; height: var(--nav-h); max-width: 1200px; margin: 0 auto; }
+  .top-bar .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; white-space: nowrap; color: var(--text); }
+  .search-wrap { flex: 1; position: relative; max-width: 400px; }
+  .search-wrap input { width: 100%; padding: 8px 12px 8px 36px; border: 1px solid var(--border); border-radius: 20px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: all .2s; }
+  .search-wrap input:focus { border-color: var(--blue); background: var(--surface); box-shadow: 0 0 0 3px var(--blue-l); }
+  .search-wrap .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 14px; }
+  .search-wrap .clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-faint); cursor: pointer; padding: 2px 6px; border-radius: 50%; font-size: 16px; display: none; }
+  .search-wrap .clear-btn.show { display: block; }
+  .search-wrap .clear-btn:hover { background: var(--surface2); }
+
+  .layout-wrap { display: flex; min-height: calc(100vh - var(--nav-h)); }
+  .tab-bar { width: var(--sidebar-w); flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; padding: 8px 0; }
+  .tab-bar::-webkit-scrollbar { width: 4px; }
+  .tab-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .tab-bar-inner { display: flex; flex-direction: column; gap: 2px; padding: 0 6px; }
+  .tab-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: none; background: none; font-size: 13px; font-weight: 500; color: var(--text-dim); cursor: pointer; border-radius: var(--radius-sm); text-align: left; transition: all .15s; font-family: var(--font); white-space: nowrap; }
+  .tab-btn:hover { background: var(--surface2); color: var(--text); }
+  .tab-btn.active { color: var(--blue); background: var(--blue-l); font-weight: 600; }
+  .tab-btn .tab-label { overflow: hidden; text-overflow: ellipsis; }
+  .nav-toggle { display: none; }
+  .nav-dropdown { display: none; }
+  .nav-overlay { display: none; }
+
+  .main { flex: 1; max-width: 960px; padding: 24px 24px 80px; margin: 0 auto; }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+  .section-desc { color: var(--text-dim); font-size: 14px; margin-bottom: 24px; }
+  .subsection-title { font-size: 17px; font-weight: 600; margin: 28px 0 14px; padding: 10px 16px; background: var(--surface2); border-radius: var(--radius-sm); border-left: 4px solid var(--blue); color: var(--text); position: sticky; top: var(--nav-h); z-index: 10; }
+
+  .entry-card { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 6px; transition: all .15s; }
+  .entry-card:hover { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue-l); }
+  .entry-card .play-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-dim); transition: all .2s; }
+  .entry-card .play-btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .entry-card .play-btn.playing { background: var(--green); border-color: var(--green); color: #fff; animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+  .entry-card .entry-body { flex: 1; min-width: 0; }
+  .entry-card .entry-ita { font-size: 15px; font-weight: 600; color: var(--text); word-break: break-word; }
+  .entry-card .entry-chn { font-size: 14px; color: var(--text-dim); margin-top: 2px; }
+  .entry-card .entry-extra { font-size: 12px; color: var(--text-faint); margin-top: 3px; font-style: italic; }
+  .entry-card .entry-role { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px; background: var(--surface2); color: var(--text-faint); margin-bottom: 4px; }
+
+  .dialog-group { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+  .dialog-group .entry-card { border: none; border-radius: 0; margin-bottom: 0; border-bottom: 1px solid var(--border); }
+  .dialog-group .entry-card:last-child { border-bottom: none; }
+
+  .null-state { text-align: center; padding: 60px 20px; color: var(--text-faint); }
+  .null-state .null-icon { font-size: 48px; margin-bottom: 12px; }
+  .search-info { margin-bottom: 12px; font-size: 13px; color: var(--text-dim); }
+  .audio-loading { display: none; position: fixed; bottom: 20px; right: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px; box-shadow: var(--shadow-lg); font-size: 13px; color: var(--text-dim); z-index: 200; }
+  .audio-loading.show { display: block; }
+  .footer { text-align: center; padding: 32px 16px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 13px; background: var(--surface); margin-top: 40px; }
+
+  @media (max-width: 768px) {
+    body { padding-top: calc(var(--nav-h) + var(--tab-h)); }
+    .top-bar-inner { padding: 0 10px; gap: 8px; }
+    .top-bar .logo { font-size: 13px; }
+    .layout-wrap { display: block; min-height: auto; }
+    .tab-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 99; width: auto; border-right: none; border-bottom: 1px solid var(--border); overflow-x: auto; overflow-y: hidden; padding: 0; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .tab-bar::-webkit-scrollbar { display: none; }
+    .tab-bar-inner { display: flex; flex-direction: row; height: var(--tab-h); padding: 0 8px; gap: 0; }
+    .tab-btn { flex-shrink: 0; padding: 0 14px; height: 100%; border-radius: 0; text-align: center; white-space: nowrap; font-size: 12px; justify-content: center; }
+    .tab-btn:hover { background: none; }
+    .tab-btn.active { background: none; color: var(--blue); box-shadow: inset 0 -3px 0 var(--blue); }
+    .nav-toggle { display: flex !important; position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 100; height: var(--tab-h); background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 12px; cursor: pointer; align-items: center; gap: 8px; user-select: none; -webkit-tap-highlight-color: transparent; }
+    .nav-toggle .hamburger { display: flex; flex-direction: column; gap: 4px; padding: 4px; }
+    .nav-toggle .hamburger span { display: block; width: 20px; height: 2px; background: var(--text-dim); border-radius: 2px; transition: all .3s; }
+    .nav-toggle.open .hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open .hamburger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .nav-toggle .nav-current { flex: 1; font-size: 14px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .nav-toggle .nav-arrow { font-size: 12px; color: var(--text-faint); transition: transform .3s; }
+    .nav-toggle.open .nav-arrow { transform: rotate(180deg); }
+    .nav-overlay { display: none; position: fixed; top: calc(var(--nav-h) + var(--tab-h)); left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.35); z-index: 98; opacity: 0; transition: opacity .25s; }
+    .nav-overlay.show { display: block; opacity: 1; }
+    .nav-dropdown { display: none; position: fixed; top: calc(var(--nav-h) + var(--tab-h)); left: 0; right: 0; max-height: 70vh; overflow-y: auto; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg); z-index: 99; padding: 8px 0; opacity: 0; transform: translateY(-8px); transition: all .25s ease; }
+    .nav-dropdown.show { display: block; opacity: 1; transform: translateY(0); }
+    .nav-dropdown .nav-drop-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 18px; border: none; background: none; font-size: 14px; font-weight: 500; color: var(--text-dim); cursor: pointer; text-align: left; transition: all .12s; font-family: var(--font); -webkit-tap-highlight-color: transparent; }
+    .nav-dropdown .nav-drop-btn:hover { background: var(--surface2); }
+    .nav-dropdown .nav-drop-btn.active { color: var(--blue); background: var(--blue-l); font-weight: 600; }
+    .nav-dropdown .nav-drop-btn .drop-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .nav-dropdown .nav-drop-btn .drop-label { flex: 1; }
+    .nav-dropdown .nav-drop-btn .drop-check { font-size: 14px; color: var(--blue); opacity: 0; transition: opacity .15s; }
+    .nav-dropdown .nav-drop-btn.active .drop-check { opacity: 1; }
+    .main { max-width: 100%; padding: 14px 10px 80px; }
+    .section-title { font-size: 19px; }
+    .subsection-title { font-size: 15px; padding: 8px 12px; top: calc(var(--nav-h) + var(--tab-h)); }
+    .entry-card { padding: 8px 10px; }
+    .entry-card .entry-ita { font-size: 14px; }
+    .entry-card .entry-chn { font-size: 13px; }
+    .entry-card .play-btn { width: 28px; height: 28px; font-size: 12px; }
+    .search-wrap { max-width: none; }
+  }
+  @media (max-width: 400px) {
+    .top-bar .logo { font-size: 11px; }
+    .tab-btn { padding: 0 8px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="logo"><span class="flag-it"></span> 华人修改店意大利语</div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="搜索意大利语或中文..." autocomplete="off">
+      <button class="clear-btn" id="clearBtn">✕</button>
+    </div>
+  </div>
+</div>
+
+<div class="layout-wrap">
+  <div class="tab-bar" id="tabBar"><div class="tab-bar-inner" id="tabBarInner"></div></div>
+  <div class="nav-toggle" id="navToggle"><div class="hamburger"><span></span><span></span><span></span></div><span class="nav-current" id="navCurrent">加载中...</span><span class="nav-arrow">▾</span></div>
+  <div class="nav-dropdown" id="navDropdown"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="main" id="mainContent"></div>
+</div>
+
+<div class="footer">
+  <p><span class="flag-it flag-it-sm"></span> <em>意大利语华人修改店实用手册 · Manuale della Sartoria Cinese</em></p>
+  <p style="margin-top:4px;font-size:12px;color:var(--text-faint);">面向意大利华人服装修改从业者 · 🔊 点击意大利语播放配音</p>
+</div>
+<div class="audio-loading" id="audioLoading">⏳ 音频加载中...</div>
+
+<script>
+const SECTIONS = [{"title":"🇮🇹 意大利语华人修改店","subsections":[{"title":"📑 目录","entries":[{"ita":"Prima parte: Il negozio e il mestiere","chn":"第一部分 · 行业概况·店铺","extra":"先认门","section":"🇮🇹 意大利语华人修改店"},{"ita":"Seconda parte: I lavori di riparazione","chn":"第二部分 · 修改项目","extra":"最常接","section":"🇮🇹 意大利语华人修改店"},{"ita":"Terza parte: Tessuti e capi","chn":"第三部分 · 面料·衣物","extra":"看材质","section":"🇮🇹 意大利语华人修改店"},{"ita":"Quarta parte: Misurazione e taglio","chn":"第四部分 · 量体·裁剪","extra":"凭尺说话","section":"🇮🇹 意大利语华人修改店"},{"ita":"Quinta parte: Macchine e attrezzi","chn":"第五部分 · 缝纫·设备","extra":"看工具","section":"🇮🇹 意大利语华人修改店"},{"ita":"Sesta parte: Dialoghi in negozio","chn":"第六部分 · 服务对话","extra":"照着说就行","section":"🇮🇹 意大利语华人修改店"},{"ita":"Settima parte: Frasi utili e cultura","chn":"第七部分 · 万能句型·服务文化","extra":"附录","section":"🇮🇹 意大利语华人修改店"}]}]},{"title":"第1部分 · ✂ 行业概况·店铺","subsections":[{"title":"1.1 店铺与行业","entries":[{"ita":"La sartoria","chn":"裁缝店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0001"},{"ita":"La sartoria cinese","chn":"华人修改店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0002"},{"ita":"Le riparazioni abbigliamento","chn":"服装修改","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0003"},{"ita":"Il sarto","chn":"男裁缝","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0004"},{"ita":"La sarta","chn":"女裁缝","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0005"},{"ita":"L’alta moda","chn":"高级定制时装","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0006"},{"ita":"Il banco dei tessuti","chn":"布料柜台","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0007"},{"ita":"Il negozio di cucito","chn":"缝纫用品店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0008"},{"ita":"Il centro riparazioni","chn":"维修中心","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0009"},{"ita":"Il laboratorio di cucito","chn":"缝补加工间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0010"},{"ita":"L’attività in nero","chn":"无照经营（非法）","extra":"切勿","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0011"},{"ita":"La partita IVA","chn":"增值税号（正规经营需有）","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0012"},{"ita":"Il permesso di soggiorno","chn":"居留许可","extra":"合法前提","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0013"},{"ita":"Il cliente","chn":"顾客","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0014"},{"ita":"La cliente","chn":"女顾客","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0015"}]},{"title":"1.2 店铺区域与用品","entries":[{"ita":"Il banco da lavoro","chn":"工作台","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0016"},{"ita":"Lo specchio","chn":"镜子","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0017"},{"ita":"Il camerino di prova","chn":"试衣间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0018"},{"ita":"Il metro a nastro","chn":"软尺","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0019"},{"ita":"Le forbici","chn":"剪刀","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0020"},{"ita":"Il portaspilli","chn":"针插","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0021"},{"ita":"Il cestino degli scampoli","chn":"碎布筐","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0022"},{"ita":"La scatola dei bottoni","chn":"纽扣盒","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0023"},{"ita":"Il registratore di cassa","chn":"收银机","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0024"},{"ita":"L’orario di apertura","chn":"营业时间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0025"},{"ita":"La chiusura settimanale","chn":"每周休息日","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0026"},{"ita":"La vetrina","chn":"橱窗","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0027"},{"ita":"Il cartello \"Aperto\"","chn":"“营业中”招牌","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0028"},{"ita":"La serranda","chn":"卷帘门","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0029"}]}]},{"title":"第2部分 · 📋 修改项目","subsections":[{"title":"2.1 常见修改","entries":[{"ita":"L’orlo","chn":"卷边 / 改裤脚长","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0030"},{"ita":"Accorciare","chn":"改短","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0031"},{"ita":"Allungare","chn":"放长","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0032"},{"ita":"Stringere","chn":"改瘦 / 收腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0033"},{"ita":"Allargare","chn":"放宽","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0034"},{"ita":"La manica","chn":"袖子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0035"},{"ita":"Accorciare le maniche","chn":"改短袖子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0036"},{"ita":"La vita","chn":"腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0037"},{"ita":"Stringere la vita","chn":"收腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0038"},{"ita":"La spalla","chn":"肩","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0039"},{"ita":"Rialzare le spalle","chn":"垫肩 / 改肩","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0040"},{"ita":"La cerniera","chn":"拉链","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0041"},{"ita":"Cambiare la cerniera","chn":"换拉链","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0042"},{"ita":"Il bottone","chn":"纽扣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0043"},{"ita":"Cucire un bottone","chn":"钉纽扣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0044"},{"ita":"Il rammendo","chn":"织补","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0045"},{"ita":"Lo strappo","chn":"破口 / 撕裂","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0046"},{"ita":"La toppa","chn":"补丁","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0047"},{"ita":"Svasare","chn":"开衩 / 放摆","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0048"},{"ita":"Allargare l'orlo","chn":"放摆","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0049"}]},{"title":"2.2 各类衣物修改","entries":[{"ita":"I pantaloni","chn":"裤子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0050"},{"ita":"Accorciare i pantaloni","chn":"改短裤子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0051"},{"ita":"La gonna","chn":"裙子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0052"},{"ita":"Il vestito","chn":"连衣裙","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0053"},{"ita":"La giacca","chn":"外套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0054"},{"ita":"Il cappotto","chn":"大衣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0055"},{"ita":"La camicia","chn":"衬衫","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0056"},{"ita":"I jeans","chn":"牛仔裤","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0057"},{"ita":"Il cappotto di lana","chn":"羊毛大衣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0058"},{"ita":"L’abito da sposa","chn":"婚纱","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0059"},{"ita":"La tenda","chn":"窗帘","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0060"},{"ita":"La federa","chn":"枕套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0061"},{"ita":"La trapunta","chn":"被套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0062"},{"ita":"Il vestito su misura","chn":"定制服装","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0063"},{"ita":"La riparazione","chn":"修补","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0064"},{"ita":"La stiratura a vapore","chn":"蒸汽熨烫","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0065"},{"ita":"La pulitura a secco","chn":"干洗","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0066"}]}]},{"title":"第3部分 · 🧶 面料·衣物","subsections":[{"title":"3.1 面料知识","entries":[{"ita":"Il tessuto","chn":"面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0067"},{"ita":"Il cotone","chn":"棉","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0068"},{"ita":"La lana","chn":"羊毛","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0069"},{"ita":"La seta","chn":"真丝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0070"},{"ita":"Il lino","chn":"亚麻","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0071"},{"ita":"Il cashmere","chn":"羊绒","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0072"},{"ita":"Il poliestere","chn":"涤纶","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0073"},{"ita":"Il denim","chn":"牛仔布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0074"},{"ita":"Il velluto","chn":"天鹅绒","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0075"},{"ita":"La pelle","chn":"真皮","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0076"},{"ita":"L’ecopelle","chn":"人造革","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0077"},{"ita":"Il tessuto stretch","chn":"弹力布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0078"},{"ita":"Il tessuto scivoloso","chn":"滑面料","extra":"难缝","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0079"},{"ita":"Il tessuto double face","chn":"双面布料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0080"},{"ita":"La fodera","chn":"里衬","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0081"},{"ita":"Il tessuto delicato","chn":"娇贵面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0082"},{"ita":"Il tessuto sintetico","chn":"化纤面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0083"},{"ita":"Il pizzo","chn":"蕾丝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0084"}]},{"title":"3.2 衣物部位与术语","entries":[{"ita":"Il collo","chn":"领子","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0085"},{"ita":"Il bavero","chn":"翻领","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0086"},{"ita":"La manica","chn":"袖子","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0087"},{"ita":"Il polsino","chn":"袖口","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0088"},{"ita":"La vita","chn":"腰","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0089"},{"ita":"Il fianco","chn":"臀围","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0090"},{"ita":"La coscia","chn":"大腿","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0091"},{"ita":"La caviglia","chn":"脚踝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0092"},{"ita":"Il ginocchio","chn":"膝盖","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0093"},{"ita":"L’orlo","chn":"下摆 / 裤脚","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0094"},{"ita":"La cucitura","chn":"缝线","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0095"},{"ita":"La piega","chn":"折痕","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0096"},{"ita":"La stoffa","chn":"布料（口语）","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0097"},{"ita":"Lo scampolo","chn":"零头布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0098"},{"ita":"Il modello","chn":"款式 / 样","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0099"},{"ita":"La taglia","chn":"尺码","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0100"}]}]},{"title":"第4部分 · 📏 量体·裁剪","subsections":[{"title":"4.1 量体用语","entries":[{"ita":"Misurare","chn":"量尺寸","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0101"},{"ita":"Il metro","chn":"尺子","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0102"},{"ita":"La misura","chn":"尺寸","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0103"},{"ita":"La lunghezza","chn":"长度","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0104"},{"ita":"La larghezza","chn":"宽度","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0105"},{"ita":"La circonferenza","chn":"周长","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0106"},{"ita":"La vita","chn":"腰围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0107"},{"ita":"Il giro vita","chn":"腰围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0108"},{"ita":"Il giro fianchi","chn":"臀围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0109"},{"ita":"Il giro manica","chn":"袖围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0110"},{"ita":"La spalla","chn":"肩宽","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0111"},{"ita":"L’altezza","chn":"身高","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0112"},{"ita":"Provare","chn":"试穿","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0113"},{"ita":"Provi questo.","chn":"您试试这件。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0114"},{"ita":"Si alzi, per favore.","chn":"请您站起来。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0115"},{"ita":"Stia fermo un momento.","chn":"请别动一下。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0116"},{"ita":"Respiri normalmente.","chn":"正常呼吸。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0117"},{"ita":"Segno il punto qui.","chn":"我在这里做记号。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0118"}]},{"title":"4.2 裁剪与拆改","entries":[{"ita":"Il cartamodello","chn":"纸样","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0119"},{"ita":"La stesura del tessuto","chn":"铺布","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0120"},{"ita":"Il taglio","chn":"裁剪","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0121"},{"ita":"Scucire","chn":"拆线","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0122"},{"ita":"Spacchettare","chn":"拆解 / 拆开","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0123"},{"ita":"Imbastire","chn":"假缝 / 绷缝","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0124"},{"ita":"Rifinire","chn":"收边 / 修饰","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0125"},{"ita":"Sovrapporre","chn":"重叠","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0126"},{"ita":"Lasciare margine","chn":"留缝份","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0127"},{"ita":"Il margine di cucitura","chn":"缝份","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0128"},{"ita":"Rovesciare","chn":"翻面","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0129"},{"ita":"Stirare","chn":"熨烫","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0130"},{"ita":"La piega","chn":"折边","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0131"},{"ita":"Fissare con gli spilli","chn":"用珠针固定","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0132"},{"ita":"Il gesso da sarta","chn":"划粉","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0133"}]}]},{"title":"第5部分 · 🧰 缝纫·设备","subsections":[{"title":"5.1 缝纫设备","entries":[{"ita":"La macchina da cucire","chn":"缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0134"},{"ita":"La macchina da cucire a pedale","chn":"脚踏缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0135"},{"ita":"La macchina industriale","chn":"工业缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0136"},{"ita":"La macchina per orli","chn":"锁边机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0137"},{"ita":"Il tagliacuci","chn":"拷边机 / overlock","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0138"},{"ita":"La macchina per bottoni","chn":"钉扣机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0139"},{"ita":"La macchina per cerniere","chn":"拉链机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0140"},{"ita":"Il ferro da stiro","chn":"熨斗","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0141"},{"ita":"L’asse da stiro","chn":"烫板","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0142"},{"ita":"La caldaia","chn":"蒸汽锅炉","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0143"},{"ita":"Il sopraggitto","chn":"包缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0144"},{"ita":"La cucitura dritta","chn":"平缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0145"},{"ita":"La cucitura zigzag","chn":"之字缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0146"}]},{"title":"5.2 工具与耗材","entries":[{"ita":"L’ago","chn":"针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0147"},{"ita":"Il filo","chn":"线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0148"},{"ita":"Il filo di cotone","chn":"棉线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0149"},{"ita":"Il filo di seta","chn":"丝线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0150"},{"ita":"Il filo invisibile","chn":"透明线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0151"},{"ita":"Le forbici da sarta","chn":"裁缝剪刀","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0152"},{"ita":"Il ditale","chn":"顶针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0153"},{"ita":"Gli spilli","chn":"珠针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0154"},{"ita":"Il portaspilli","chn":"针插","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0155"},{"ita":"La lametta","chn":"拆线刀","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0156"},{"ita":"L’uncinetto","chn":"拆线器","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0157"},{"ita":"Il bottone","chn":"纽扣","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0158"},{"ita":"La cerniera lampo","chn":"拉链","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0159"},{"ita":"L’elastico","chn":"松紧带","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0160"},{"ita":"La spilla di sicurezza","chn":"别针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0161"},{"ita":"Il gancio","chn":"挂钩","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0162"}]}]},{"title":"第6部分 · 💬 服务对话","subsections":[{"title":"6.1 接待与量体","entries":[{"ita":"Buongiorno, che cosa serve?","chn":"您好，需要什么？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0163"},{"ita":"Vorrei accorciare i pantaloni.","chn":"我想把裤子改短。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0164"},{"ita":"Di quanto li accorciamo?","chn":"改短多少？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0165"},{"ita":"Cinque centimetri.","chn":"五厘米。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0166"},{"ita":"Si sieda qui, la misuro.","chn":"请坐这儿，我量一下。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0167"},{"ita":"Va bene così?","chn":"这样行吗？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0168"},{"ita":"Sì, grazie.","chn":"好的，谢谢。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0169"},{"ita":"Lo segno con il gesso.","chn":"我用划粉做记号。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0170"},{"ita":"Torna domani a provare.","chn":"明天回来试穿。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0171"},{"ita":"Va bene, a domani.","chn":"好，明天见。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0172"}]},{"title":"6.2 报价与交期","entries":[{"ita":"Quanto viene?","chn":"多少钱？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0173"},{"ita":"Sono dodici euro.","chn":"十二欧。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0174"},{"ita":"È caro.","chn":"有点贵。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0175"},{"ita":"È un lavoro preciso.","chn":"这是细活。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0176"},{"ita":"Quando è pronto?","chn":"什么时候好？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0177"},{"ita":"Tra due giorni.","chn":"两天后。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0178"},{"ita":"Posso averlo prima?","chn":"能早点吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0179"},{"ita":"Le do la priorità.","chn":"我给您加急。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0180"},{"ita":"Posso lasciare il vestito?","chn":"衣服能放您这儿吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0181"},{"ita":"Certo, lo metto da parte.","chn":"当然，我帮您留着。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0182"},{"ita":"Pago ora?","chn":"现在付吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0183"},{"ita":"Quando ritira, va bene.","chn":"您来取时付就行。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0184"}]},{"title":"6.3 试衣与修改反馈","entries":[{"ita":"Provi davanti allo specchio.","chn":"请到镜子前试。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0185"},{"ita":"È ancora un po’ lungo.","chn":"还是有点长。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0186"},{"ita":"Accorcio ancora un po’.","chn":"我再改短一点。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0187"},{"ita":"Ora va bene.","chn":"现在好了。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0188"},{"ita":"La vita stringe troppo.","chn":"腰太紧了。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0189"},{"ita":"Allargo un centimetro.","chn":"我放宽一厘米。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0190"},{"ita":"La cerniera non sale.","chn":"拉链拉不上。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0191"},{"ita":"Cambio la cerniera.","chn":"我换条拉链。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0192"},{"ita":"È tutto a posto, grazie.","chn":"都好了，谢谢。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0193"},{"ita":"A presto!","chn":"回头见！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0194"}]},{"title":"6.4 卖家常用语（修改店视角）","entries":[{"ita":"Benvenuta in sartoria!","chn":"欢迎光临修改店！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0195"},{"ita":"Mi dia il capo da sistemare.","chn":"把要改的衣服给我。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0196"},{"ita":"Che tipo di intervento vuole?","chn":"您想怎么改？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0197"},{"ita":"Posso fare qualsiasi modifica.","chn":"什么修改都能做。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0198"},{"ita":"Lo misuro subito.","chn":"我马上量。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0199"},{"ita":"Le do un prezzo onesto.","chn":"我给您公道价。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0200"},{"ita":"Il lavoro è garantito.","chn":"活儿有保证。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0201"},{"ita":"Posso aggiustare anche la pelle.","chn":"皮衣我也能修。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0202"},{"ita":"La richiamo quando è pronto.","chn":"好了我打电话给您。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0203"},{"ita":"Mi lasci un numero di telefono.","chn":"留个电话给我。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0204"},{"ita":"Grazie della fiducia!","chn":"感谢您的信任！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0205"},{"ita":"Torni quando vuole!","chn":"随时欢迎再来！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0206"}]}]},{"title":"第7部分 · 🗣 万能句型·服务文化","subsections":[{"title":"7.1 万能句型","entries":[{"ita":"Vorrei modificare questo.","chn":"我想改这件。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0207"},{"ita":"Quanto costa la riparazione?","chn":"修改多少钱？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0208"},{"ita":"Quanto tempo ci vuole?","chn":"要多久？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0209"},{"ita":"È possibile fare prima?","chn":"能加急吗？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0210"},{"ita":"Accorci di due centimetri.","chn":"改短两厘米。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0211"},{"ita":"Stringi un po’ la vita.","chn":"腰收一点。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0212"},{"ita":"Cuci questo bottone.","chn":"钉这颗扣子。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0213"},{"ita":"La cucitura si è aperta.","chn":"缝线开了。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0214"},{"ita":"C’è uno strappo qui.","chn":"这里破了。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0215"},{"ita":"Posso ritirare oggi?","chn":"今天能取吗？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0216"},{"ita":"Mi sta un po’ stretto.","chn":"我穿有点紧。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0217"},{"ita":"Mi sta largo.","chn":"我穿有点松。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0218"},{"ita":"Va bene così, grazie.","chn":"这样就行，谢谢。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0219"},{"ita":"A che ora chiudete?","chn":"几点关门？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0220"},{"ita":"Torno domani.","chn":"我明天再来。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0221"},{"ita":"Grazie, arrivederci.","chn":"谢谢，再见。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0222"}]},{"title":"7.2 意大利服务文化贴士","entries":[{"ita":"La domenica spesso chiuso.","chn":"周日常关门。","extra":"休息日","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0223"},{"ita":"Si lascia un acconto?","chn":"有时收定金。","extra":"惯例","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0224"},{"ita":"Il prezzo si concorda prima.","chn":"价格先谈好。","extra":"避免纠纷","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0225"},{"ita":"La ricevuta va chiesta.","chn":"记得要收据。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0226"},{"ita":"L’orario di pranzo chiude.","chn":"午休常关门。","extra":"意式习惯","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0227"},{"ita":"Il cliente ritira in negozio.","chn":"顾客到店取衣。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0228"},{"ita":"La sartoria seria ha la partita IVA.","chn":"正规店有税号。","extra":"合法","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0229"},{"ita":"Si misura davanti allo specchio.","chn":"在镜前量体试衣。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0230"},{"ita":"Il lavoro ben fatto porta clienti.","chn":"手艺好回头客多。","extra":"口碑","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0231"},{"ita":"Si ringrazia sempre.","chn":"常说谢谢。","extra":"礼貌","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0232"}]},{"title":"7.3 卖家万能句（修改店视角）","entries":[{"ita":"Cosa posso fare per lei?","chn":"我能为您做什么？","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0233"},{"ita":"Le mostro come verrà.","chn":"我给您看改后效果。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0234"},{"ita":"È il nostro lavoro più richiesto.","chn":"这是我们最常接的活。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0235"},{"ita":"Posso sistemare anche capi delicati.","chn":"娇贵衣物我也能处理。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0236"},{"ita":"Ha portato il capo giusto?","chn":"您带对衣服了吗？","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0237"},{"ita":"Le preparo la ricevuta.","chn":"我给您开收据。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0238"},{"ita":"Accettiamo anche bancomat.","chn":"我们也收银行卡。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0239"},{"ita":"È tutto suo.","chn":"这是您的了。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0240"},{"ita":"La chiamo io al telefono.","chn":"好了我电话联系您。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0241"},{"ita":"Resto a sua disposizione.","chn":"我随时为您服务。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0242"},{"ita":"Buona giornata!","chn":"祝您一天愉快！","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0243"}]}]}];
+const ALL_ENTRIES = [{"ita":"La sartoria","chn":"裁缝店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0001"},{"ita":"La sartoria cinese","chn":"华人修改店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0002"},{"ita":"Le riparazioni abbigliamento","chn":"服装修改","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0003"},{"ita":"Il sarto","chn":"男裁缝","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0004"},{"ita":"La sarta","chn":"女裁缝","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0005"},{"ita":"L’alta moda","chn":"高级定制时装","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0006"},{"ita":"Il banco dei tessuti","chn":"布料柜台","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0007"},{"ita":"Il negozio di cucito","chn":"缝纫用品店","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0008"},{"ita":"Il centro riparazioni","chn":"维修中心","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0009"},{"ita":"Il laboratorio di cucito","chn":"缝补加工间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0010"},{"ita":"L’attività in nero","chn":"无照经营（非法）","extra":"切勿","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0011"},{"ita":"La partita IVA","chn":"增值税号（正规经营需有）","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0012"},{"ita":"Il permesso di soggiorno","chn":"居留许可","extra":"合法前提","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0013"},{"ita":"Il cliente","chn":"顾客","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0014"},{"ita":"La cliente","chn":"女顾客","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.1 店铺与行业","id":"audio_0015"},{"ita":"Il banco da lavoro","chn":"工作台","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0016"},{"ita":"Lo specchio","chn":"镜子","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0017"},{"ita":"Il camerino di prova","chn":"试衣间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0018"},{"ita":"Il metro a nastro","chn":"软尺","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0019"},{"ita":"Le forbici","chn":"剪刀","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0020"},{"ita":"Il portaspilli","chn":"针插","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0021"},{"ita":"Il cestino degli scampoli","chn":"碎布筐","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0022"},{"ita":"La scatola dei bottoni","chn":"纽扣盒","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0023"},{"ita":"Il registratore di cassa","chn":"收银机","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0024"},{"ita":"L’orario di apertura","chn":"营业时间","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0025"},{"ita":"La chiusura settimanale","chn":"每周休息日","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0026"},{"ita":"La vetrina","chn":"橱窗","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0027"},{"ita":"Il cartello \"Aperto\"","chn":"“营业中”招牌","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0028"},{"ita":"La serranda","chn":"卷帘门","extra":"","section":"第1部分 · ✂ 行业概况·店铺","subsection":"1.2 店铺区域与用品","id":"audio_0029"},{"ita":"L’orlo","chn":"卷边 / 改裤脚长","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0030"},{"ita":"Accorciare","chn":"改短","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0031"},{"ita":"Allungare","chn":"放长","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0032"},{"ita":"Stringere","chn":"改瘦 / 收腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0033"},{"ita":"Allargare","chn":"放宽","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0034"},{"ita":"La manica","chn":"袖子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0035"},{"ita":"Accorciare le maniche","chn":"改短袖子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0036"},{"ita":"La vita","chn":"腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0037"},{"ita":"Stringere la vita","chn":"收腰","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0038"},{"ita":"La spalla","chn":"肩","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0039"},{"ita":"Rialzare le spalle","chn":"垫肩 / 改肩","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0040"},{"ita":"La cerniera","chn":"拉链","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0041"},{"ita":"Cambiare la cerniera","chn":"换拉链","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0042"},{"ita":"Il bottone","chn":"纽扣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0043"},{"ita":"Cucire un bottone","chn":"钉纽扣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0044"},{"ita":"Il rammendo","chn":"织补","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0045"},{"ita":"Lo strappo","chn":"破口 / 撕裂","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0046"},{"ita":"La toppa","chn":"补丁","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0047"},{"ita":"Svasare","chn":"开衩 / 放摆","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0048"},{"ita":"Allargare l'orlo","chn":"放摆","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.1 常见修改","id":"audio_0049"},{"ita":"I pantaloni","chn":"裤子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0050"},{"ita":"Accorciare i pantaloni","chn":"改短裤子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0051"},{"ita":"La gonna","chn":"裙子","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0052"},{"ita":"Il vestito","chn":"连衣裙","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0053"},{"ita":"La giacca","chn":"外套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0054"},{"ita":"Il cappotto","chn":"大衣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0055"},{"ita":"La camicia","chn":"衬衫","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0056"},{"ita":"I jeans","chn":"牛仔裤","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0057"},{"ita":"Il cappotto di lana","chn":"羊毛大衣","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0058"},{"ita":"L’abito da sposa","chn":"婚纱","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0059"},{"ita":"La tenda","chn":"窗帘","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0060"},{"ita":"La federa","chn":"枕套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0061"},{"ita":"La trapunta","chn":"被套","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0062"},{"ita":"Il vestito su misura","chn":"定制服装","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0063"},{"ita":"La riparazione","chn":"修补","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0064"},{"ita":"La stiratura a vapore","chn":"蒸汽熨烫","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0065"},{"ita":"La pulitura a secco","chn":"干洗","extra":"","section":"第2部分 · 📋 修改项目","subsection":"2.2 各类衣物修改","id":"audio_0066"},{"ita":"Il tessuto","chn":"面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0067"},{"ita":"Il cotone","chn":"棉","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0068"},{"ita":"La lana","chn":"羊毛","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0069"},{"ita":"La seta","chn":"真丝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0070"},{"ita":"Il lino","chn":"亚麻","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0071"},{"ita":"Il cashmere","chn":"羊绒","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0072"},{"ita":"Il poliestere","chn":"涤纶","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0073"},{"ita":"Il denim","chn":"牛仔布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0074"},{"ita":"Il velluto","chn":"天鹅绒","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0075"},{"ita":"La pelle","chn":"真皮","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0076"},{"ita":"L’ecopelle","chn":"人造革","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0077"},{"ita":"Il tessuto stretch","chn":"弹力布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0078"},{"ita":"Il tessuto scivoloso","chn":"滑面料","extra":"难缝","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0079"},{"ita":"Il tessuto double face","chn":"双面布料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0080"},{"ita":"La fodera","chn":"里衬","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0081"},{"ita":"Il tessuto delicato","chn":"娇贵面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0082"},{"ita":"Il tessuto sintetico","chn":"化纤面料","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0083"},{"ita":"Il pizzo","chn":"蕾丝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.1 面料知识","id":"audio_0084"},{"ita":"Il collo","chn":"领子","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0085"},{"ita":"Il bavero","chn":"翻领","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0086"},{"ita":"La manica","chn":"袖子","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0087"},{"ita":"Il polsino","chn":"袖口","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0088"},{"ita":"La vita","chn":"腰","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0089"},{"ita":"Il fianco","chn":"臀围","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0090"},{"ita":"La coscia","chn":"大腿","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0091"},{"ita":"La caviglia","chn":"脚踝","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0092"},{"ita":"Il ginocchio","chn":"膝盖","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0093"},{"ita":"L’orlo","chn":"下摆 / 裤脚","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0094"},{"ita":"La cucitura","chn":"缝线","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0095"},{"ita":"La piega","chn":"折痕","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0096"},{"ita":"La stoffa","chn":"布料（口语）","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0097"},{"ita":"Lo scampolo","chn":"零头布","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0098"},{"ita":"Il modello","chn":"款式 / 样","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0099"},{"ita":"La taglia","chn":"尺码","extra":"","section":"第3部分 · 🧶 面料·衣物","subsection":"3.2 衣物部位与术语","id":"audio_0100"},{"ita":"Misurare","chn":"量尺寸","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0101"},{"ita":"Il metro","chn":"尺子","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0102"},{"ita":"La misura","chn":"尺寸","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0103"},{"ita":"La lunghezza","chn":"长度","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0104"},{"ita":"La larghezza","chn":"宽度","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0105"},{"ita":"La circonferenza","chn":"周长","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0106"},{"ita":"La vita","chn":"腰围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0107"},{"ita":"Il giro vita","chn":"腰围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0108"},{"ita":"Il giro fianchi","chn":"臀围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0109"},{"ita":"Il giro manica","chn":"袖围","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0110"},{"ita":"La spalla","chn":"肩宽","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0111"},{"ita":"L’altezza","chn":"身高","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0112"},{"ita":"Provare","chn":"试穿","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0113"},{"ita":"Provi questo.","chn":"您试试这件。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0114"},{"ita":"Si alzi, per favore.","chn":"请您站起来。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0115"},{"ita":"Stia fermo un momento.","chn":"请别动一下。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0116"},{"ita":"Respiri normalmente.","chn":"正常呼吸。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0117"},{"ita":"Segno il punto qui.","chn":"我在这里做记号。","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.1 量体用语","id":"audio_0118"},{"ita":"Il cartamodello","chn":"纸样","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0119"},{"ita":"La stesura del tessuto","chn":"铺布","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0120"},{"ita":"Il taglio","chn":"裁剪","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0121"},{"ita":"Scucire","chn":"拆线","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0122"},{"ita":"Spacchettare","chn":"拆解 / 拆开","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0123"},{"ita":"Imbastire","chn":"假缝 / 绷缝","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0124"},{"ita":"Rifinire","chn":"收边 / 修饰","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0125"},{"ita":"Sovrapporre","chn":"重叠","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0126"},{"ita":"Lasciare margine","chn":"留缝份","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0127"},{"ita":"Il margine di cucitura","chn":"缝份","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0128"},{"ita":"Rovesciare","chn":"翻面","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0129"},{"ita":"Stirare","chn":"熨烫","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0130"},{"ita":"La piega","chn":"折边","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0131"},{"ita":"Fissare con gli spilli","chn":"用珠针固定","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0132"},{"ita":"Il gesso da sarta","chn":"划粉","extra":"","section":"第4部分 · 📏 量体·裁剪","subsection":"4.2 裁剪与拆改","id":"audio_0133"},{"ita":"La macchina da cucire","chn":"缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0134"},{"ita":"La macchina da cucire a pedale","chn":"脚踏缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0135"},{"ita":"La macchina industriale","chn":"工业缝纫机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0136"},{"ita":"La macchina per orli","chn":"锁边机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0137"},{"ita":"Il tagliacuci","chn":"拷边机 / overlock","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0138"},{"ita":"La macchina per bottoni","chn":"钉扣机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0139"},{"ita":"La macchina per cerniere","chn":"拉链机","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0140"},{"ita":"Il ferro da stiro","chn":"熨斗","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0141"},{"ita":"L’asse da stiro","chn":"烫板","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0142"},{"ita":"La caldaia","chn":"蒸汽锅炉","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0143"},{"ita":"Il sopraggitto","chn":"包缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0144"},{"ita":"La cucitura dritta","chn":"平缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0145"},{"ita":"La cucitura zigzag","chn":"之字缝","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.1 缝纫设备","id":"audio_0146"},{"ita":"L’ago","chn":"针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0147"},{"ita":"Il filo","chn":"线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0148"},{"ita":"Il filo di cotone","chn":"棉线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0149"},{"ita":"Il filo di seta","chn":"丝线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0150"},{"ita":"Il filo invisibile","chn":"透明线","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0151"},{"ita":"Le forbici da sarta","chn":"裁缝剪刀","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0152"},{"ita":"Il ditale","chn":"顶针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0153"},{"ita":"Gli spilli","chn":"珠针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0154"},{"ita":"Il portaspilli","chn":"针插","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0155"},{"ita":"La lametta","chn":"拆线刀","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0156"},{"ita":"L’uncinetto","chn":"拆线器","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0157"},{"ita":"Il bottone","chn":"纽扣","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0158"},{"ita":"La cerniera lampo","chn":"拉链","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0159"},{"ita":"L’elastico","chn":"松紧带","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0160"},{"ita":"La spilla di sicurezza","chn":"别针","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0161"},{"ita":"Il gancio","chn":"挂钩","extra":"","section":"第5部分 · 🧰 缝纫·设备","subsection":"5.2 工具与耗材","id":"audio_0162"},{"ita":"Buongiorno, che cosa serve?","chn":"您好，需要什么？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0163"},{"ita":"Vorrei accorciare i pantaloni.","chn":"我想把裤子改短。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0164"},{"ita":"Di quanto li accorciamo?","chn":"改短多少？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0165"},{"ita":"Cinque centimetri.","chn":"五厘米。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0166"},{"ita":"Si sieda qui, la misuro.","chn":"请坐这儿，我量一下。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0167"},{"ita":"Va bene così?","chn":"这样行吗？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0168"},{"ita":"Sì, grazie.","chn":"好的，谢谢。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0169"},{"ita":"Lo segno con il gesso.","chn":"我用划粉做记号。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0170"},{"ita":"Torna domani a provare.","chn":"明天回来试穿。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0171"},{"ita":"Va bene, a domani.","chn":"好，明天见。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.1 接待与量体","id":"audio_0172"},{"ita":"Quanto viene?","chn":"多少钱？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0173"},{"ita":"Sono dodici euro.","chn":"十二欧。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0174"},{"ita":"È caro.","chn":"有点贵。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0175"},{"ita":"È un lavoro preciso.","chn":"这是细活。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0176"},{"ita":"Quando è pronto?","chn":"什么时候好？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0177"},{"ita":"Tra due giorni.","chn":"两天后。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0178"},{"ita":"Posso averlo prima?","chn":"能早点吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0179"},{"ita":"Le do la priorità.","chn":"我给您加急。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0180"},{"ita":"Posso lasciare il vestito?","chn":"衣服能放您这儿吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0181"},{"ita":"Certo, lo metto da parte.","chn":"当然，我帮您留着。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0182"},{"ita":"Pago ora?","chn":"现在付吗？","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0183"},{"ita":"Quando ritira, va bene.","chn":"您来取时付就行。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.2 报价与交期","id":"audio_0184"},{"ita":"Provi davanti allo specchio.","chn":"请到镜子前试。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0185"},{"ita":"È ancora un po’ lungo.","chn":"还是有点长。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0186"},{"ita":"Accorcio ancora un po’.","chn":"我再改短一点。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0187"},{"ita":"Ora va bene.","chn":"现在好了。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0188"},{"ita":"La vita stringe troppo.","chn":"腰太紧了。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0189"},{"ita":"Allargo un centimetro.","chn":"我放宽一厘米。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0190"},{"ita":"La cerniera non sale.","chn":"拉链拉不上。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0191"},{"ita":"Cambio la cerniera.","chn":"我换条拉链。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0192"},{"ita":"È tutto a posto, grazie.","chn":"都好了，谢谢。","extra":"👩 Cliente 顾客","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0193"},{"ita":"A presto!","chn":"回头见！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.3 试衣与修改反馈","id":"audio_0194"},{"ita":"Benvenuta in sartoria!","chn":"欢迎光临修改店！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0195"},{"ita":"Mi dia il capo da sistemare.","chn":"把要改的衣服给我。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0196"},{"ita":"Che tipo di intervento vuole?","chn":"您想怎么改？","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0197"},{"ita":"Posso fare qualsiasi modifica.","chn":"什么修改都能做。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0198"},{"ita":"Lo misuro subito.","chn":"我马上量。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0199"},{"ita":"Le do un prezzo onesto.","chn":"我给您公道价。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0200"},{"ita":"Il lavoro è garantito.","chn":"活儿有保证。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0201"},{"ita":"Posso aggiustare anche la pelle.","chn":"皮衣我也能修。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0202"},{"ita":"La richiamo quando è pronto.","chn":"好了我打电话给您。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0203"},{"ita":"Mi lasci un numero di telefono.","chn":"留个电话给我。","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0204"},{"ita":"Grazie della fiducia!","chn":"感谢您的信任！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0205"},{"ita":"Torni quando vuole!","chn":"随时欢迎再来！","extra":"✂ Sarto 裁缝","section":"第6部分 · 💬 服务对话","subsection":"6.4 卖家常用语（修改店视角）","id":"audio_0206"},{"ita":"Vorrei modificare questo.","chn":"我想改这件。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0207"},{"ita":"Quanto costa la riparazione?","chn":"修改多少钱？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0208"},{"ita":"Quanto tempo ci vuole?","chn":"要多久？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0209"},{"ita":"È possibile fare prima?","chn":"能加急吗？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0210"},{"ita":"Accorci di due centimetri.","chn":"改短两厘米。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0211"},{"ita":"Stringi un po’ la vita.","chn":"腰收一点。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0212"},{"ita":"Cuci questo bottone.","chn":"钉这颗扣子。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0213"},{"ita":"La cucitura si è aperta.","chn":"缝线开了。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0214"},{"ita":"C’è uno strappo qui.","chn":"这里破了。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0215"},{"ita":"Posso ritirare oggi?","chn":"今天能取吗？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0216"},{"ita":"Mi sta un po’ stretto.","chn":"我穿有点紧。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0217"},{"ita":"Mi sta largo.","chn":"我穿有点松。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0218"},{"ita":"Va bene così, grazie.","chn":"这样就行，谢谢。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0219"},{"ita":"A che ora chiudete?","chn":"几点关门？","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0220"},{"ita":"Torno domani.","chn":"我明天再来。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0221"},{"ita":"Grazie, arrivederci.","chn":"谢谢，再见。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.1 万能句型","id":"audio_0222"},{"ita":"La domenica spesso chiuso.","chn":"周日常关门。","extra":"休息日","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0223"},{"ita":"Si lascia un acconto?","chn":"有时收定金。","extra":"惯例","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0224"},{"ita":"Il prezzo si concorda prima.","chn":"价格先谈好。","extra":"避免纠纷","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0225"},{"ita":"La ricevuta va chiesta.","chn":"记得要收据。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0226"},{"ita":"L’orario di pranzo chiude.","chn":"午休常关门。","extra":"意式习惯","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0227"},{"ita":"Il cliente ritira in negozio.","chn":"顾客到店取衣。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0228"},{"ita":"La sartoria seria ha la partita IVA.","chn":"正规店有税号。","extra":"合法","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0229"},{"ita":"Si misura davanti allo specchio.","chn":"在镜前量体试衣。","extra":"","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0230"},{"ita":"Il lavoro ben fatto porta clienti.","chn":"手艺好回头客多。","extra":"口碑","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0231"},{"ita":"Si ringrazia sempre.","chn":"常说谢谢。","extra":"礼貌","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.2 意大利服务文化贴士","id":"audio_0232"},{"ita":"Cosa posso fare per lei?","chn":"我能为您做什么？","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0233"},{"ita":"Le mostro come verrà.","chn":"我给您看改后效果。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0234"},{"ita":"È il nostro lavoro più richiesto.","chn":"这是我们最常接的活。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0235"},{"ita":"Posso sistemare anche capi delicati.","chn":"娇贵衣物我也能处理。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0236"},{"ita":"Ha portato il capo giusto?","chn":"您带对衣服了吗？","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0237"},{"ita":"Le preparo la ricevuta.","chn":"我给您开收据。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0238"},{"ita":"Accettiamo anche bancomat.","chn":"我们也收银行卡。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0239"},{"ita":"È tutto suo.","chn":"这是您的了。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0240"},{"ita":"La chiamo io al telefono.","chn":"好了我电话联系您。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0241"},{"ita":"Resto a sua disposizione.","chn":"我随时为您服务。","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0242"},{"ita":"Buona giornata!","chn":"祝您一天愉快！","extra":"✂ Sarto 裁缝","section":"第7部分 · 🗣 万能句型·服务文化","subsection":"7.3 卖家万能句（修改店视角）","id":"audio_0243"}];
+
+
+let activeSection = 0;
+let searchQuery = '';
+let currentAudio = null;
+let currentBtn = null;
+const audioCache = {};
+const sectionColors = ['var(--green)','var(--blue)','var(--gold)','var(--purple)','var(--teal)','var(--red)','var(--green)','var(--blue)','var(--gold)','var(--purple)','var(--teal)'];
+
+function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function renderTitle(title) { return title.replace(/🇮🇹/g, '<span class="flag-it" style="width:22px;height:15px;display:inline-block;vertical-align:middle;"></span>'); }
+function hasChinese(t) { for (let c of t) { if (c >= '\u4e00' && c <= '\u9fff') return true; } return false; }
+function hasAudio(e) { return !hasChinese(e.ita) && e.ita.trim().length > 1; }
+
+function renderTabs() {
+  const c = document.getElementById('tabBarInner');
+  c.innerHTML = '';
+  SECTIONS.forEach((sec, i) => {
+    if (i === 0) return;
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (activeSection === i ? ' active' : '');
+    let label = sec.title.replace(/🇮🇹/g, '').trim();
+    const m = label.match(/(第.+部分|附录)\s*[·•]?\s*(.*)/);
+    if (m) label = (m[2] || m[1]).substring(0, 14);
+    const ci = (i - 1) % sectionColors.length;
+    btn.innerHTML = '<span class="drop-dot" style="background:' + sectionColors[ci] + ';width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block;"></span><span class="tab-label">' + escHtml(label) + '</span>';
+    btn.dataset.idx = i;
+    btn.addEventListener('click', () => switchSection(i));
+    c.appendChild(btn);
+  });
+}
+
+function switchSection(idx) {
+  activeSection = idx;
+  document.querySelectorAll('.tab-btn').forEach(b => { b.classList.toggle('active', parseInt(b.dataset.idx) === idx); });
+  renderContent();
+}
+
+function renderContent() {
+  const main = document.getElementById('mainContent');
+
+  // Global search mode: show results from ALL sections
+  if (searchQuery) {
+    let html = '<div class="section-title">🔍 搜索结果</div>';
+    let total = 0;
+    SECTIONS.forEach(sec => {
+      if (sec.title.startsWith('🇮🇹')) return; // skip overview
+      let secMatches = 0;
+      let secHtml = '';
+      const subs = sec.subsections || [];
+      subs.forEach(sub => {
+        const ve = sub.entries.filter(e => matchesSearch(e));
+        if (ve.length === 0) return;
+        secMatches += ve.length;
+        secHtml += '<div class="subsection-title">' + escHtml(sub.title) + ' <span style="font-weight:400;color:var(--text-faint);font-size:13px;">' + ve.length + '</span></div>';
+        const isDialog = sub.title.includes('对话') || sub.title.includes('场景');
+        if (isDialog) { secHtml += renderDialogEntries(ve); }
+        else { secHtml += ve.map(e => renderEntry(e)).join(''); }
+      });
+      if (sec.entries && sec.entries.length > 0) {
+        const v = sec.entries.filter(e => matchesSearch(e));
+        if (v.length > 0) { secMatches += v.length; secHtml += v.map(e => renderEntry(e)).join(''); }
+      }
+      if (secMatches > 0) {
+        total += secMatches;
+        html += '<div class="subsection-title" style="margin-top:24px;font-size:18px;border-left-color:var(--purple);">' + renderTitle(sec.title) + ' <span style="font-weight:400;color:var(--text-faint);font-size:13px;">' + secMatches + ' 条</span></div>';
+        html += secHtml;
+      }
+    });
+    html = html.replace('<div class="section-title">🔍 搜索结果</div>', '<div class="section-title">🔍 搜索结果</div><div class="section-desc">关键词 "' + escHtml(searchQuery) + '" 共匹配 ' + total + ' 条</div>');
+    if (total === 0) { html = '<div class="null-state"><div class="null-icon">🔍</div><p>没有找到匹配 "' + escHtml(searchQuery) + '" 的内容</p></div>'; }
+    main.innerHTML = html;
+    document.querySelectorAll('.play-btn[data-audio-id]').forEach(btn => { btn.addEventListener('click', function(e) { e.stopPropagation(); playAudio(this); }); });
+    return;
+  }
+
+  // Normal mode: show current section
+  const sec = SECTIONS[activeSection];
+  if (!sec) { main.innerHTML = '<div class="null-state"><p>暂无内容</p></div>'; return; }
+  let html = '<div class="section-title">' + renderTitle(sec.title) + '</div>';
+  html += '<div class="section-desc">' + (sec.subsections.length + ' 个分类 · ' + countSectionEntries(sec) + ' 条内容') + '</div>';
+  const subs = sec.subsections || [];
+  subs.forEach(sub => {
+    const ve = sub.entries.filter(e => matchesSearch(e));
+    if (searchQuery && ve.length === 0) return;
+    html += '<div class="subsection-title">' + escHtml(sub.title) + ' <span style="font-weight:400;color:var(--text-faint);font-size:13px;">' + ve.length + '</span></div>';
+    const isDialog = sub.title.includes('对话') || sub.title.includes('场景');
+    if (isDialog) { html += renderDialogEntries(ve); }
+    else { ve.forEach(e => { html += renderEntry(e); }); }
+  });
+  if (sec.entries && sec.entries.length > 0) {
+    const v = sec.entries.filter(e => matchesSearch(e));
+    if (!searchQuery || v.length > 0) { v.forEach(e => { html += renderEntry(e); }); }
+  }
+  if (html.indexOf('entry-card') === -1) { html = '<div class="null-state"><div class="null-icon">🔍</div><p>没有找到匹配 "' + escHtml(searchQuery) + '" 的内容</p></div>'; }
+  main.innerHTML = html;
+  document.querySelectorAll('.play-btn[data-audio-id]').forEach(btn => { btn.addEventListener('click', function(e) { e.stopPropagation(); playAudio(this); }); });
+  // Preload this section's audio so the first tap plays instantly.
+  prefetchSectionAudio();
+}
+
+function renderDialogEntries(entries) {
+  let html = '<div class="dialog-group">';
+  entries.forEach(e => {
+    const role = e.extra && (e.extra.includes('👩') || e.extra.includes('✂️') || e.extra.includes('👨')) ? e.extra : '';
+    const au = hasAudio(e);
+    html += '<div class="entry-card">';
+    if (au) html += '<button class="play-btn" data-audio-id="' + e.id + '">▶</button>';
+    html += '<div class="entry-body">';
+    if (role) html += '<div class="entry-role">' + escHtml(role) + '</div>';
+    html += '<div class="entry-ita">' + escHtml(e.ita) + '</div>';
+    html += '<div class="entry-chn">' + escHtml(e.chn) + '</div>';
+    if (e.extra && !role) html += '<div class="entry-extra">' + escHtml(e.extra) + '</div>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+function renderEntry(e) {
+  const role = e.extra && (e.extra.includes('👩') || e.extra.includes('✂️') || e.extra.includes('👨')) ? e.extra : '';
+  const au = hasAudio(e);
+  let html = '<div class="entry-card">';
+  if (au) html += '<button class="play-btn" data-audio-id="' + e.id + '">▶</button>';
+  html += '<div class="entry-body">';
+  if (role) html += '<div class="entry-role">' + escHtml(role) + '</div>';
+  html += '<div class="entry-ita">' + escHtml(e.ita) + '</div>';
+  html += '<div class="entry-chn">' + escHtml(e.chn) + '</div>';
+  if (e.extra && e.extra !== '—' && !role) html += '<div class="entry-extra">' + escHtml(e.extra) + '</div>';
+  html += '</div></div>';
+  return html;
+}
+
+// Stable version param: lets the browser cache audio across replays/sessions.
+// Bump this constant when you replace any audio file, so clients re-fetch.
+const AUDIO_VER = '1';
+function audioUrl(aid) { return 'audio/' + aid + '.mp3?v=' + AUDIO_VER; }
+function getAudio(aid) {
+  if (!audioCache[aid]) {
+    const a = new Audio();
+    a.dataset.audioId = aid;
+    a.preload = 'auto';
+    a.src = audioUrl(aid);
+    a.addEventListener('ended', function() {
+      if (currentBtn && currentBtn.dataset.audioId === aid) { currentBtn.textContent = '▶'; currentBtn.classList.remove('playing'); }
+      if (currentAudio && currentAudio.dataset.audioId === aid) { currentAudio = null; currentBtn = null; }
+    });
+    a.addEventListener('play', function() {
+      // interrupt: any audio starting stops all others
+      Object.keys(audioCache).forEach(function(k) {
+        if (k === aid) return;
+        var o = audioCache[k];
+        if (o && !o.paused) { try { o.pause(); o.currentTime = 0; } catch (e) {} }
+        var ib = document.querySelectorAll('[data-audio-id="' + k + '"]');
+        Array.prototype.forEach.call(ib, function(b) { b.textContent = '▲'; if (b.classList) b.classList.remove('playing'); });
+      });
+    });
+    audioCache[aid] = a;
+  }
+  return audioCache[aid];
+}
+// Efficient audio prefetch: only warm audio for entries near the viewport, plus on hover/tap.
+// Replaces the old behavior that eagerly loaded the ENTIRE active section (40-60 parallel requests).
+const _PREFETCH_MAX = 6;
+let _prefetchQueue = [];
+let _prefetchRunning = 0;
+let _audioObserver = null;
+let _hoverBound = false;
+function _enqueueAudio(aid) {
+  if (!aid) return;
+  if (window.__audioWarmed && window.__audioWarmed[aid]) return;
+  if (_prefetchQueue.indexOf(aid) !== -1) return;
+  _prefetchQueue.push(aid);
+  _pumpPrefetch();
+}
+function _pumpPrefetch() {
+  while (_prefetchRunning < _PREFETCH_MAX && _prefetchQueue.length) {
+    const aid = _prefetchQueue.shift();
+    const a = getAudio(aid);
+    if (!a) continue;
+    if (a.__warmed) continue;
+    _prefetchRunning++;
+    (function(audio){
+      const done = function(){ audio.__warmed = true; if (!window.__audioWarmed) window.__audioWarmed = {}; window.__audioWarmed[aid] = true; _prefetchRunning--; _pumpPrefetch(); };
+      audio.addEventListener('canplay', done, { once: true });
+      audio.addEventListener('error', function(){ _prefetchRunning--; _pumpPrefetch(); }, { once: true });
+      try { audio.load(); } catch (err) { _prefetchRunning--; _pumpPrefetch(); }
+    })(a);
+  }
+}
+function prefetchSectionAudio() {
+  if ('IntersectionObserver' in window) {
+    if (_audioObserver) _audioObserver.disconnect();
+    _audioObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(en) {
+        if (en.isIntersecting) {
+          _enqueueAudio(en.target.getAttribute('data-audio-id'));
+          _audioObserver.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: '300px' });
+    document.querySelectorAll('.play-btn[data-audio-id]').forEach(function(btn){ _audioObserver.observe(btn); });
+  } else {
+    const sec = SECTIONS[activeSection];
+    if (!sec) return;
+    const ids = [];
+    (sec.subsections || []).forEach(s => s.entries.forEach(e => { if (hasAudio(e)) ids.push(e.id); }));
+    (sec.entries || []).forEach(e => { if (hasAudio(e)) ids.push(e.id); });
+    ids.slice(0, 12).forEach(function(id){ try { getAudio(id).load(); } catch (e) {} });
+  }
+  if (!_hoverBound) {
+    _hoverBound = true;
+    document.addEventListener('pointerover', function(e){ var b = e.target.closest && e.target.closest('.play-btn[data-audio-id]'); if (b) _enqueueAudio(b.getAttribute('data-audio-id')); }, true);
+    document.addEventListener('touchstart', function(e){ var b = e.target.closest && e.target.closest('.play-btn[data-audio-id]'); if (b) _enqueueAudio(b.getAttribute('data-audio-id')); }, true);
+  }
+}
+function playAudio(btn) {
+  const aid = btn.dataset.audioId;
+  const entry = ALL_ENTRIES.find(e => e.id === aid);
+  if (!entry) return;
+  if (currentAudio && !currentAudio.paused) {
+    if (currentAudio.dataset.audioId === aid) { currentAudio.pause(); currentAudio.currentTime = 0; if (currentBtn) { currentBtn.textContent = '▶'; currentBtn.classList.remove('playing'); } currentAudio = null; currentBtn = null; return; }
+    currentAudio.pause(); currentAudio.currentTime = 0;
+    if (currentBtn) { currentBtn.textContent = '▶'; currentBtn.classList.remove('playing'); }
+  }
+  const a = getAudio(aid);
+  a.currentTime = 0;
+  // Play immediately within the user gesture so it also works on iOS/Safari/mobile.
+  const markPlaying = function() { btn.textContent = '⏸'; btn.classList.add('playing'); currentAudio = a; currentBtn = btn; };
+  const pr = a.play();
+  if (pr && pr.then) {
+    pr.then(markPlaying).catch(function(err) {
+      console.warn('Play rejected:', err);
+      let retried = false;
+      const retry = function() {
+        if (retried) return; retried = true;
+        const p2 = a.play();
+        if (p2 && p2.then) p2.then(markPlaying).catch(showPlayError);
+      };
+      a.addEventListener('canplay', retry, { once: true });
+      a.addEventListener('error', showPlayError, { once: true });
+    });
+  }
+}
+function showPlayError() {
+  if (currentBtn) { currentBtn.textContent = '⚠'; currentBtn.style.color = 'var(--red)'; }
+  setTimeout(function() { if (currentBtn) { currentBtn.textContent = '▶'; currentBtn.style.color = ''; } }, 2500);
+  currentAudio = null; currentBtn = null;
+}
+
+function matchesSearch(e) { if (!searchQuery) return true; const q = searchQuery.toLowerCase(); return e.ita.toLowerCase().includes(q) || e.chn.toLowerCase().includes(q) || (e.extra && e.extra.toLowerCase().includes(q)); }
+function countSectionEntries(sec) { let c = 0; (sec.subsections || []).forEach(s => { c += s.entries.length; }); c += (sec.entries || []).length; return c; }
+function countVisibleEntries(sec) { let c = 0; (sec.subsections || []).forEach(s => { s.entries.forEach(e => { if (matchesSearch(e)) c++; }); }); (sec.entries || []).forEach(e => { if (matchesSearch(e)) c++; }); return c; }
+
+// Mobile Nav
+const navToggle = document.getElementById('navToggle');
+const navDropdown = document.getElementById('navDropdown');
+const navOverlay = document.getElementById('navOverlay');
+const navCurrent = document.getElementById('navCurrent');
+let navOpen = false;
+const sectionLabels = [];
+
+function buildNavLabels() {
+  sectionLabels.length = 0;
+  SECTIONS.forEach((sec, i) => {
+    if (i === 0) { sectionLabels.push(''); return; }
+    let label = sec.title.replace(/🇮🇹/g, '').trim();
+    const m = label.match(/(第.+部分|附录)\s*[·•]?\s*(.*)/);
+    if (m) label = (m[2] || m[1]).substring(0, 14); else label = label.substring(0, 14);
+    sectionLabels.push(label);
+  });
+}
+
+function renderNavDropdown() {
+  if (!navDropdown) return;
+  navDropdown.innerHTML = '';
+  SECTIONS.forEach((sec, i) => {
+    if (i === 0) return;
+    const label = sectionLabels[i] || '';
+    const btn = document.createElement('button');
+    btn.className = 'nav-drop-btn' + (activeSection === i ? ' active' : '');
+    const ci = (i - 1) % sectionColors.length;
+    btn.innerHTML = '<span class="drop-dot" style="background:' + sectionColors[ci] + '"></span><span class="drop-label">' + escHtml(label) + '</span><span class="drop-check">✓</span>';
+    btn.addEventListener('click', function() { switchSection(i); closeNav(); });
+    navDropdown.appendChild(btn);
+  });
+}
+
+function closeNav() { navOpen = false; if (navToggle) navToggle.classList.remove('open'); if (navDropdown) navDropdown.classList.remove('show'); if (navOverlay) navOverlay.classList.remove('show'); document.body.style.overflow = ''; }
+function toggleNav() { navOpen = !navOpen; if (navToggle) navToggle.classList.toggle('open', navOpen); if (navDropdown) navDropdown.classList.toggle('show', navOpen); if (navOverlay) navOverlay.classList.toggle('show', navOpen); document.body.style.overflow = navOpen ? 'hidden' : ''; }
+function updateNavCurrent() { if (navCurrent) navCurrent.textContent = sectionLabels[activeSection] || '选择分类'; }
+
+const _origSwitch = switchSection;
+switchSection = function(idx) {
+  _origSwitch(idx);
+  updateNavCurrent();
+  window.scrollTo(0, 0);
+  if (navDropdown && navDropdown.children.length > 0) { navDropdown.querySelectorAll('.nav-drop-btn').forEach((b, i) => { b.classList.toggle('active', (i + 1) === idx); }); }
+};
+
+if (navToggle) navToggle.addEventListener('click', toggleNav);
+if (navOverlay) navOverlay.addEventListener('click', closeNav);
+
+// Search
+const searchInput = document.getElementById('searchInput');
+const clearBtn = document.getElementById('clearBtn');
+searchInput.addEventListener('input', function() { searchQuery = this.value.trim(); clearBtn.classList.toggle('show', searchQuery.length > 0); renderContent(); });
+clearBtn.addEventListener('click', function() { searchInput.value = ''; searchQuery = ''; clearBtn.classList.remove('show'); renderContent(); searchInput.focus(); });
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'f') { e.preventDefault(); searchInput.focus(); }
+  if (e.key === 'Escape' && navOpen) closeNav();
+});
+
+// Init
+buildNavLabels();
+renderTabs();
+renderNavDropdown();
+switchSection(1);
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').catch(function(e){ console.warn('SW register failed', e); });
+  });
+}
+</script>
+<style>
+/* 正文内容字号放大 50% (2026-09-17) */
+.entry-card .entry-ita { font-size: 22.5px; }
+.entry-card .entry-chn { font-size: 21px; }
+.entry-card .entry-extra { font-size: 18px; }
+.entry-card .entry-role { font-size: 18px; }
+.section-title { font-size: 33px; }
+.section-desc { font-size: 21px; }
+.subsection-title { font-size: 25.5px; }
+@media (max-width: 768px) {
+  .entry-card .entry-ita { font-size: 21px; }
+  .entry-card .entry-chn { font-size: 19.5px; }
+  .entry-card .entry-extra { font-size: 18px; }
+  .entry-card .entry-role { font-size: 18px; }
+  .section-title { font-size: 28.5px; }
+  .section-desc { font-size: 21px; }
+  .subsection-title { font-size: 22.5px; }
+}
+</style>
+<style>
+/* 正文统一减小 20% (2026-09-18) */
+.entry-card .entry-ita { font-size: 18px; }
+.entry-card .entry-chn { font-size: 16.8px; }
+.entry-card .entry-extra { font-size: 14.4px; }
+.entry-card .entry-role { font-size: 14.4px; }
+.section-title { font-size: 26.4px; }
+.section-desc { font-size: 16.8px; }
+.subsection-title { font-size: 20.4px; }
+@media (max-width: 768px) {
+  .entry-card .entry-ita { font-size: 16.8px; }
+  .entry-card .entry-chn { font-size: 15.6px; }
+  .entry-card .entry-extra { font-size: 14.4px; }
+  .entry-card .entry-role { font-size: 14.4px; }
+  .section-title { font-size: 22.8px; }
+  .section-desc { font-size: 16.8px; }
+  .subsection-title { font-size: 18px; }
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,974 @@
+[
+{
+"id": "audio_0001",
+"text": "La sartoria"
+},
+{
+"id": "audio_0002",
+"text": "La sartoria cinese"
+},
+{
+"id": "audio_0003",
+"text": "Le riparazioni abbigliamento"
+},
+{
+"id": "audio_0004",
+"text": "Il sarto"
+},
+{
+"id": "audio_0005",
+"text": "La sarta"
+},
+{
+"id": "audio_0006",
+"text": "L’alta moda"
+},
+{
+"id": "audio_0007",
+"text": "Il banco dei tessuti"
+},
+{
+"id": "audio_0008",
+"text": "Il negozio di cucito"
+},
+{
+"id": "audio_0009",
+"text": "Il centro riparazioni"
+},
+{
+"id": "audio_0010",
+"text": "Il laboratorio di cucito"
+},
+{
+"id": "audio_0011",
+"text": "L’attività in nero"
+},
+{
+"id": "audio_0012",
+"text": "La partita IVA"
+},
+{
+"id": "audio_0013",
+"text": "Il permesso di soggiorno"
+},
+{
+"id": "audio_0014",
+"text": "Il cliente"
+},
+{
+"id": "audio_0015",
+"text": "La cliente"
+},
+{
+"id": "audio_0016",
+"text": "Il banco da lavoro"
+},
+{
+"id": "audio_0017",
+"text": "Lo specchio"
+},
+{
+"id": "audio_0018",
+"text": "Il camerino di prova"
+},
+{
+"id": "audio_0019",
+"text": "Il metro a nastro"
+},
+{
+"id": "audio_0020",
+"text": "Le forbici"
+},
+{
+"id": "audio_0021",
+"text": "Il portaspilli"
+},
+{
+"id": "audio_0022",
+"text": "Il cestino degli scampoli"
+},
+{
+"id": "audio_0023",
+"text": "La scatola dei bottoni"
+},
+{
+"id": "audio_0024",
+"text": "Il registratore di cassa"
+},
+{
+"id": "audio_0025",
+"text": "L’orario di apertura"
+},
+{
+"id": "audio_0026",
+"text": "La chiusura settimanale"
+},
+{
+"id": "audio_0027",
+"text": "La vetrina"
+},
+{
+"id": "audio_0028",
+"text": "Il cartello \"Aperto\""
+},
+{
+"id": "audio_0029",
+"text": "La serranda"
+},
+{
+"id": "audio_0030",
+"text": "L’orlo"
+},
+{
+"id": "audio_0031",
+"text": "Accorciare"
+},
+{
+"id": "audio_0032",
+"text": "Allungare"
+},
+{
+"id": "audio_0033",
+"text": "Stringere"
+},
+{
+"id": "audio_0034",
+"text": "Allargare"
+},
+{
+"id": "audio_0035",
+"text": "La manica"
+},
+{
+"id": "audio_0036",
+"text": "Accorciare le maniche"
+},
+{
+"id": "audio_0037",
+"text": "La vita"
+},
+{
+"id": "audio_0038",
+"text": "Stringere la vita"
+},
+{
+"id": "audio_0039",
+"text": "La spalla"
+},
+{
+"id": "audio_0040",
+"text": "Rialzare le spalle"
+},
+{
+"id": "audio_0041",
+"text": "La cerniera"
+},
+{
+"id": "audio_0042",
+"text": "Cambiare la cerniera"
+},
+{
+"id": "audio_0043",
+"text": "Il bottone"
+},
+{
+"id": "audio_0044",
+"text": "Cucire un bottone"
+},
+{
+"id": "audio_0045",
+"text": "Il rammendo"
+},
+{
+"id": "audio_0046",
+"text": "Lo strappo"
+},
+{
+"id": "audio_0047",
+"text": "La toppa"
+},
+{
+"id": "audio_0048",
+"text": "Svasare"
+},
+{
+"id": "audio_0049",
+"text": "Allargare l'orlo"
+},
+{
+"id": "audio_0050",
+"text": "I pantaloni"
+},
+{
+"id": "audio_0051",
+"text": "Accorciare i pantaloni"
+},
+{
+"id": "audio_0052",
+"text": "La gonna"
+},
+{
+"id": "audio_0053",
+"text": "Il vestito"
+},
+{
+"id": "audio_0054",
+"text": "La giacca"
+},
+{
+"id": "audio_0055",
+"text": "Il cappotto"
+},
+{
+"id": "audio_0056",
+"text": "La camicia"
+},
+{
+"id": "audio_0057",
+"text": "I jeans"
+},
+{
+"id": "audio_0058",
+"text": "Il cappotto di lana"
+},
+{
+"id": "audio_0059",
+"text": "L’abito da sposa"
+},
+{
+"id": "audio_0060",
+"text": "La tenda"
+},
+{
+"id": "audio_0061",
+"text": "La federa"
+},
+{
+"id": "audio_0062",
+"text": "La trapunta"
+},
+{
+"id": "audio_0063",
+"text": "Il vestito su misura"
+},
+{
+"id": "audio_0064",
+"text": "La riparazione"
+},
+{
+"id": "audio_0065",
+"text": "La stiratura a vapore"
+},
+{
+"id": "audio_0066",
+"text": "La pulitura a secco"
+},
+{
+"id": "audio_0067",
+"text": "Il tessuto"
+},
+{
+"id": "audio_0068",
+"text": "Il cotone"
+},
+{
+"id": "audio_0069",
+"text": "La lana"
+},
+{
+"id": "audio_0070",
+"text": "La seta"
+},
+{
+"id": "audio_0071",
+"text": "Il lino"
+},
+{
+"id": "audio_0072",
+"text": "Il cashmere"
+},
+{
+"id": "audio_0073",
+"text": "Il poliestere"
+},
+{
+"id": "audio_0074",
+"text": "Il denim"
+},
+{
+"id": "audio_0075",
+"text": "Il velluto"
+},
+{
+"id": "audio_0076",
+"text": "La pelle"
+},
+{
+"id": "audio_0077",
+"text": "L’ecopelle"
+},
+{
+"id": "audio_0078",
+"text": "Il tessuto stretch"
+},
+{
+"id": "audio_0079",
+"text": "Il tessuto scivoloso"
+},
+{
+"id": "audio_0080",
+"text": "Il tessuto double face"
+},
+{
+"id": "audio_0081",
+"text": "La fodera"
+},
+{
+"id": "audio_0082",
+"text": "Il tessuto delicato"
+},
+{
+"id": "audio_0083",
+"text": "Il tessuto sintetico"
+},
+{
+"id": "audio_0084",
+"text": "Il pizzo"
+},
+{
+"id": "audio_0085",
+"text": "Il collo"
+},
+{
+"id": "audio_0086",
+"text": "Il bavero"
+},
+{
+"id": "audio_0087",
+"text": "La manica"
+},
+{
+"id": "audio_0088",
+"text": "Il polsino"
+},
+{
+"id": "audio_0089",
+"text": "La vita"
+},
+{
+"id": "audio_0090",
+"text": "Il fianco"
+},
+{
+"id": "audio_0091",
+"text": "La coscia"
+},
+{
+"id": "audio_0092",
+"text": "La caviglia"
+},
+{
+"id": "audio_0093",
+"text": "Il ginocchio"
+},
+{
+"id": "audio_0094",
+"text": "L’orlo"
+},
+{
+"id": "audio_0095",
+"text": "La cucitura"
+},
+{
+"id": "audio_0096",
+"text": "La piega"
+},
+{
+"id": "audio_0097",
+"text": "La stoffa"
+},
+{
+"id": "audio_0098",
+"text": "Lo scampolo"
+},
+{
+"id": "audio_0099",
+"text": "Il modello"
+},
+{
+"id": "audio_0100",
+"text": "La taglia"
+},
+{
+"id": "audio_0101",
+"text": "Misurare"
+},
+{
+"id": "audio_0102",
+"text": "Il metro"
+},
+{
+"id": "audio_0103",
+"text": "La misura"
+},
+{
+"id": "audio_0104",
+"text": "La lunghezza"
+},
+{
+"id": "audio_0105",
+"text": "La larghezza"
+},
+{
+"id": "audio_0106",
+"text": "La circonferenza"
+},
+{
+"id": "audio_0107",
+"text": "La vita"
+},
+{
+"id": "audio_0108",
+"text": "Il giro vita"
+},
+{
+"id": "audio_0109",
+"text": "Il giro fianchi"
+},
+{
+"id": "audio_0110",
+"text": "Il giro manica"
+},
+{
+"id": "audio_0111",
+"text": "La spalla"
+},
+{
+"id": "audio_0112",
+"text": "L’altezza"
+},
+{
+"id": "audio_0113",
+"text": "Provare"
+},
+{
+"id": "audio_0114",
+"text": "Provi questo."
+},
+{
+"id": "audio_0115",
+"text": "Si alzi, per favore."
+},
+{
+"id": "audio_0116",
+"text": "Stia fermo un momento."
+},
+{
+"id": "audio_0117",
+"text": "Respiri normalmente."
+},
+{
+"id": "audio_0118",
+"text": "Segno il punto qui."
+},
+{
+"id": "audio_0119",
+"text": "Il cartamodello"
+},
+{
+"id": "audio_0120",
+"text": "La stesura del tessuto"
+},
+{
+"id": "audio_0121",
+"text": "Il taglio"
+},
+{
+"id": "audio_0122",
+"text": "Scucire"
+},
+{
+"id": "audio_0123",
+"text": "Spacchettare"
+},
+{
+"id": "audio_0124",
+"text": "Imbastire"
+},
+{
+"id": "audio_0125",
+"text": "Rifinire"
+},
+{
+"id": "audio_0126",
+"text": "Sovrapporre"
+},
+{
+"id": "audio_0127",
+"text": "Lasciare margine"
+},
+{
+"id": "audio_0128",
+"text": "Il margine di cucitura"
+},
+{
+"id": "audio_0129",
+"text": "Rovesciare"
+},
+{
+"id": "audio_0130",
+"text": "Stirare"
+},
+{
+"id": "audio_0131",
+"text": "La piega"
+},
+{
+"id": "audio_0132",
+"text": "Fissare con gli spilli"
+},
+{
+"id": "audio_0133",
+"text": "Il gesso da sarta"
+},
+{
+"id": "audio_0134",
+"text": "La macchina da cucire"
+},
+{
+"id": "audio_0135",
+"text": "La macchina da cucire a pedale"
+},
+{
+"id": "audio_0136",
+"text": "La macchina industriale"
+},
+{
+"id": "audio_0137",
+"text": "La macchina per orli"
+},
+{
+"id": "audio_0138",
+"text": "Il tagliacuci"
+},
+{
+"id": "audio_0139",
+"text": "La macchina per bottoni"
+},
+{
+"id": "audio_0140",
+"text": "La macchina per cerniere"
+},
+{
+"id": "audio_0141",
+"text": "Il ferro da stiro"
+},
+{
+"id": "audio_0142",
+"text": "L’asse da stiro"
+},
+{
+"id": "audio_0143",
+"text": "La caldaia"
+},
+{
+"id": "audio_0144",
+"text": "Il sopraggitto"
+},
+{
+"id": "audio_0145",
+"text": "La cucitura dritta"
+},
+{
+"id": "audio_0146",
+"text": "La cucitura zigzag"
+},
+{
+"id": "audio_0147",
+"text": "L’ago"
+},
+{
+"id": "audio_0148",
+"text": "Il filo"
+},
+{
+"id": "audio_0149",
+"text": "Il filo di cotone"
+},
+{
+"id": "audio_0150",
+"text": "Il filo di seta"
+},
+{
+"id": "audio_0151",
+"text": "Il filo invisibile"
+},
+{
+"id": "audio_0152",
+"text": "Le forbici da sarta"
+},
+{
+"id": "audio_0153",
+"text": "Il ditale"
+},
+{
+"id": "audio_0154",
+"text": "Gli spilli"
+},
+{
+"id": "audio_0155",
+"text": "Il portaspilli"
+},
+{
+"id": "audio_0156",
+"text": "La lametta"
+},
+{
+"id": "audio_0157",
+"text": "L’uncinetto"
+},
+{
+"id": "audio_0158",
+"text": "Il bottone"
+},
+{
+"id": "audio_0159",
+"text": "La cerniera lampo"
+},
+{
+"id": "audio_0160",
+"text": "L’elastico"
+},
+{
+"id": "audio_0161",
+"text": "La spilla di sicurezza"
+},
+{
+"id": "audio_0162",
+"text": "Il gancio"
+},
+{
+"id": "audio_0163",
+"text": "Buongiorno, che cosa serve?"
+},
+{
+"id": "audio_0164",
+"text": "Vorrei accorciare i pantaloni."
+},
+{
+"id": "audio_0165",
+"text": "Di quanto li accorciamo?"
+},
+{
+"id": "audio_0166",
+"text": "Cinque centimetri."
+},
+{
+"id": "audio_0167",
+"text": "Si sieda qui, la misuro."
+},
+{
+"id": "audio_0168",
+"text": "Va bene così?"
+},
+{
+"id": "audio_0169",
+"text": "Sì, grazie."
+},
+{
+"id": "audio_0170",
+"text": "Lo segno con il gesso."
+},
+{
+"id": "audio_0171",
+"text": "Torna domani a provare."
+},
+{
+"id": "audio_0172",
+"text": "Va bene, a domani."
+},
+{
+"id": "audio_0173",
+"text": "Quanto viene?"
+},
+{
+"id": "audio_0174",
+"text": "Sono dodici euro."
+},
+{
+"id": "audio_0175",
+"text": "È caro."
+},
+{
+"id": "audio_0176",
+"text": "È un lavoro preciso."
+},
+{
+"id": "audio_0177",
+"text": "Quando è pronto?"
+},
+{
+"id": "audio_0178",
+"text": "Tra due giorni."
+},
+{
+"id": "audio_0179",
+"text": "Posso averlo prima?"
+},
+{
+"id": "audio_0180",
+"text": "Le do la priorità."
+},
+{
+"id": "audio_0181",
+"text": "Posso lasciare il vestito?"
+},
+{
+"id": "audio_0182",
+"text": "Certo, lo metto da parte."
+},
+{
+"id": "audio_0183",
+"text": "Pago ora?"
+},
+{
+"id": "audio_0184",
+"text": "Quando ritira, va bene."
+},
+{
+"id": "audio_0185",
+"text": "Provi davanti allo specchio."
+},
+{
+"id": "audio_0186",
+"text": "È ancora un po’ lungo."
+},
+{
+"id": "audio_0187",
+"text": "Accorcio ancora un po’."
+},
+{
+"id": "audio_0188",
+"text": "Ora va bene."
+},
+{
+"id": "audio_0189",
+"text": "La vita stringe troppo."
+},
+{
+"id": "audio_0190",
+"text": "Allargo un centimetro."
+},
+{
+"id": "audio_0191",
+"text": "La cerniera non sale."
+},
+{
+"id": "audio_0192",
+"text": "Cambio la cerniera."
+},
+{
+"id": "audio_0193",
+"text": "È tutto a posto, grazie."
+},
+{
+"id": "audio_0194",
+"text": "A presto!"
+},
+{
+"id": "audio_0195",
+"text": "Benvenuta in sartoria!"
+},
+{
+"id": "audio_0196",
+"text": "Mi dia il capo da sistemare."
+},
+{
+"id": "audio_0197",
+"text": "Che tipo di intervento vuole?"
+},
+{
+"id": "audio_0198",
+"text": "Posso fare qualsiasi modifica."
+},
+{
+"id": "audio_0199",
+"text": "Lo misuro subito."
+},
+{
+"id": "audio_0200",
+"text": "Le do un prezzo onesto."
+},
+{
+"id": "audio_0201",
+"text": "Il lavoro è garantito."
+},
+{
+"id": "audio_0202",
+"text": "Posso aggiustare anche la pelle."
+},
+{
+"id": "audio_0203",
+"text": "La richiamo quando è pronto."
+},
+{
+"id": "audio_0204",
+"text": "Mi lasci un numero di telefono."
+},
+{
+"id": "audio_0205",
+"text": "Grazie della fiducia!"
+},
+{
+"id": "audio_0206",
+"text": "Torni quando vuole!"
+},
+{
+"id": "audio_0207",
+"text": "Vorrei modificare questo."
+},
+{
+"id": "audio_0208",
+"text": "Quanto costa la riparazione?"
+},
+{
+"id": "audio_0209",
+"text": "Quanto tempo ci vuole?"
+},
+{
+"id": "audio_0210",
+"text": "È possibile fare prima?"
+},
+{
+"id": "audio_0211",
+"text": "Accorci di due centimetri."
+},
+{
+"id": "audio_0212",
+"text": "Stringi un po’ la vita."
+},
+{
+"id": "audio_0213",
+"text": "Cuci questo bottone."
+},
+{
+"id": "audio_0214",
+"text": "La cucitura si è aperta."
+},
+{
+"id": "audio_0215",
+"text": "C’è uno strappo qui."
+},
+{
+"id": "audio_0216",
+"text": "Posso ritirare oggi?"
+},
+{
+"id": "audio_0217",
+"text": "Mi sta un po’ stretto."
+},
+{
+"id": "audio_0218",
+"text": "Mi sta largo."
+},
+{
+"id": "audio_0219",
+"text": "Va bene così, grazie."
+},
+{
+"id": "audio_0220",
+"text": "A che ora chiudete?"
+},
+{
+"id": "audio_0221",
+"text": "Torno domani."
+},
+{
+"id": "audio_0222",
+"text": "Grazie, arrivederci."
+},
+{
+"id": "audio_0223",
+"text": "La domenica spesso chiuso."
+},
+{
+"id": "audio_0224",
+"text": "Si lascia un acconto?"
+},
+{
+"id": "audio_0225",
+"text": "Il prezzo si concorda prima."
+},
+{
+"id": "audio_0226",
+"text": "La ricevuta va chiesta."
+},
+{
+"id": "audio_0227",
+"text": "L’orario di pranzo chiude."
+},
+{
+"id": "audio_0228",
+"text": "Il cliente ritira in negozio."
+},
+{
+"id": "audio_0229",
+"text": "La sartoria seria ha la partita IVA."
+},
+{
+"id": "audio_0230",
+"text": "Si misura davanti allo specchio."
+},
+{
+"id": "audio_0231",
+"text": "Il lavoro ben fatto porta clienti."
+},
+{
+"id": "audio_0232",
+"text": "Si ringrazia sempre."
+},
+{
+"id": "audio_0233",
+"text": "Cosa posso fare per lei?"
+},
+{
+"id": "audio_0234",
+"text": "Le mostro come verrà."
+},
+{
+"id": "audio_0235",
+"text": "È il nostro lavoro più richiesto."
+},
+{
+"id": "audio_0236",
+"text": "Posso sistemare anche capi delicati."
+},
+{
+"id": "audio_0237",
+"text": "Ha portato il capo giusto?"
+},
+{
+"id": "audio_0238",
+"text": "Le preparo la ricevuta."
+},
+{
+"id": "audio_0239",
+"text": "Accettiamo anche bancomat."
+},
+{
+"id": "audio_0240",
+"text": "È tutto suo."
+},
+{
+"id": "audio_0241",
+"text": "La chiamo io al telefono."
+},
+{
+"id": "audio_0242",
+"text": "Resto a sua disposizione."
+},
+{
+"id": "audio_0243",
+"text": "Buona giornata!"
+}
+]
